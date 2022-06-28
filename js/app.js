@@ -50,14 +50,14 @@ if (document.querySelector('.home-banner .swiper')) {
   });
 }
 
-/* #Post Slider 1
+/* #Card Slider 1
   ======================================================= */
-if (document.querySelector('.post-slider-1 .swiper')) {
-  new Swiper(".post-slider-1 .swiper", {
+if (document.querySelector('.card-slider-1 .swiper')) {
+  new Swiper(".card-slider-1 .swiper", {
     loop: true,
     navigation: {
-      nextEl: ".post-slider-1 .next",
-      prevEl: ".post-slider-1 .prev",
+      nextEl: ".card-slider-1 .next",
+      prevEl: ".card-slider-1 .prev",
     },
     pagination: {
       el: ".swiper-pagination",
@@ -74,13 +74,13 @@ if (document.querySelector('.post-slider-1 .swiper')) {
   });
 }
 
-/* #Post Slider 2
+/* #Card Slider 2
   ======================================================= */
-if (document.querySelector('.post-slider-2 .swiper')) {
-  new Swiper(".post-slider-2 .swiper", {
+if (document.querySelector('.card-slider-2 .swiper')) {
+  new Swiper(".card-slider-2 .swiper", {
     navigation: {
-      nextEl: ".post-slider-2 .next",
-      prevEl: ".post-slider-2 .prev",
+      nextEl: ".card-slider-2 .next",
+      prevEl: ".card-slider-2 .prev",
     },
     pagination: {
       el: ".swiper-pagination",
