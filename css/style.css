@@ -1801,3 +1801,48 @@ body {
     height: 93.73vw;
   }
 }
+
+/* #Error (404)
+================================================== */
+.error-page {
+  background-color: #F7F5F5;
+  padding-top: 0!important;
+}
+
+.error {
+  position: relative;
+}
+
+.error .img img,
+.error .img picture {
+  width: 100%;
+}
+
+.error .text {
+  text-align: center;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error .text h1 {
+  line-height: 1;
+}
+
+.error .text p {
+  margin: 1vw 0 2vw 0;
+}
+
+@media (max-width: 1023.98px) {
+  .error .text {
+    top: 50%;
+    width: 90%;
+  }
+  
+  .error .text p {
+    margin: 4vw auto 6.65vw auto;
+    width: 60%;
+    line-height: 1.2;
+  }
+}
