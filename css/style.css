@@ -1821,12 +1821,17 @@ body {
 .error .text {
   text-align: center;
   position: absolute;
-  top: 58%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .error .text h1 {
+  font-size: 15vw;
+  line-height: 1;
+}
+
+.error .text h2 {
   line-height: 1;
 }
 
@@ -1836,8 +1841,12 @@ body {
 
 @media (max-width: 1023.98px) {
   .error .text {
-    top: 50%;
+    top: 38%;
     width: 90%;
+  }
+
+  .error .text h1 {
+    font-size: 43vw;
   }
   
   .error .text p {
