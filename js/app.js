@@ -97,3 +97,28 @@ if (document.querySelector('.card-slider-2 .swiper')) {
     }
   });
 }
+
+/* #Card Slider 3
+======================================================= */
+if (document.querySelector('.card-slider-3 .swiper')) {
+  new Swiper(".card-slider-3 .swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".card-slider-3 .next",
+      prevEl: ".card-slider-3 .prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.23,
+        centeredSlides: true,
+      },
+      1024: {
+        slidesPerView: 2.37,
+        centeredSlides: false,
+      }
+    }
+  });
+}
