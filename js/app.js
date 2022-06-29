@@ -5,6 +5,7 @@ const hamburgerBtn = document.querySelector('.header-hamburger');
 
 if (hamburgerBtn) {
   hamburgerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     header.classList.toggle('show');
     body.classList.toggle('no-scroll');
   });

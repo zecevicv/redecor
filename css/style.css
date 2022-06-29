@@ -254,6 +254,20 @@ body {
   vertical-align: middle;
 }
 
+.card-1 .card-label {
+  position: absolute;
+  top: 1.3vw;
+  left: 1.5vw;
+  background-color: #FF674F;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5vw;
+  border-radius: 500px;
+  padding: 0 1.2vw;
+}
+
 @media (max-width: 1023.98px) {
   .card-1 {
     border-radius: 2.66vw;
@@ -276,6 +290,13 @@ body {
   .card-1 h3 img {
     width: 3vw;
     margin-left: 2vw;
+  }
+
+  .card-1 .card-label {
+    top: 4.93vw;
+    left: 4.93vw;
+    height: 6.26vw;
+    padding: 0 3.33vw;
   }
 }
 
@@ -2325,5 +2346,94 @@ body {
   .challenge-inner ul li {
     flex: 0 0 50%;
     padding: 2.66vw 1.66vw;
+  }
+}
+
+/* #Season Pass Banner
+================================================== */
+.season-pass-banner {
+  background-color: #F7F5F5;
+  padding-bottom: 6vw;
+}
+
+.season-pass-banner .container {
+  width: 78.9%;
+}
+
+.season-pass-banner h1 {
+  margin: 2.6vw 0 2vw 0;
+}
+
+@media (max-width: 1023.98px) {
+  .season-pass-banner {
+    padding-bottom: 17.33vw;
+  }
+  
+  .season-pass-banner .container {
+    width: 100%;
+  }
+  
+  .season-pass-banner h1 {
+    margin: 0 0 6vw 0;
+  }
+
+  .season-pass-banner .breadcrumbs,
+  .season-pass-banner h1 {
+    padding-left: 4.93vw;
+    padding-right: 4.93vw;
+  }
+}
+
+/* #Season Pass
+================================================== */
+.season-pass {
+  background-color: #F7F5F5;
+  padding-bottom: 6.77vw;
+}
+
+.season-pass .container {
+  width: 78.9%;
+}
+
+.season-pass h2 {
+  margin-bottom: 1.5vw;
+}
+
+.season-pass ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -.7vw;
+}
+
+.season-pass ul li {
+  flex: 0 0 33.333333%;
+  padding: .7vw;
+}
+
+@media (max-width: 1023.98px) {
+  .season-pass {
+    padding-bottom: 20vw;
+  }
+  
+  .season-pass .container {
+    width: 100%;
+    padding: 0 4.93vw;
+  }
+  
+  .season-pass h2 {
+    margin-bottom: 6.4vw;
+  }
+  
+  .season-pass ul {
+    display: block;
+    margin: 0;
+  }
+  
+  .season-pass ul li {
+    padding: 0;
+  }
+
+  .season-pass ul li:not(:last-child) {
+    margin-bottom: 4.66vw;
   }
 }
