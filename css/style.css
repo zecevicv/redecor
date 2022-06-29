@@ -474,6 +474,48 @@ body {
   }
 }
 
+/* #Card 4
+================================================== */
+.card-4 {
+  padding: .6vw;
+  transition: all .4s ease;
+  border-radius: .5vw;
+}
+
+.card-4:hover {
+  background-color: white;
+  box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+}
+
+.card-4 .img img {
+  width: 100%;
+  height: 7.55vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: .5vw;
+}
+
+.card-4 .text {
+  padding-top: .4vw;
+  line-height: 1.2;
+}
+
+@media (max-width: 1023.98px) {
+  .card-4 {
+    padding: 1.73vw 1.73vw 4vw 1.73vw;
+    border-radius: 2.66vw;
+  }
+  
+  .card-4 .img img {
+    height: 44.66vw;
+    border-radius: 2.66vw;
+  }
+  
+  .card-4 .text {
+    padding-top: 2vw;
+  }
+}
+
 /* #Rating
 ================================================== */
 .rating {
@@ -2435,5 +2477,205 @@ body {
 
   .season-pass ul li:not(:last-child) {
     margin-bottom: 4.66vw;
+  }
+}
+
+/* #Challenge Design Banner
+================================================== */
+.challenge-design-banner {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 7.8vw;
+}
+
+.challenge-design-banner {
+  background-color: #F7F5F5;
+}
+
+.challenge-design-banner .container {
+  width: 78.9%;
+}
+
+.challenge-design-banner .row {
+  display: flex;
+  position: relative;
+}
+
+.challenge-design-banner .row > .img {
+  flex: 0 0 38.8vw;
+}
+
+.challenge-design-banner .row > .img img {
+  width: 100%;
+  height: 39vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1.04vw;
+  border-top-left-radius: 10.4vw;
+}
+
+.challenge-design-banner .row > .text {
+  flex-grow: 1;
+  margin-left: 6.4vw;
+  padding-top: 2.6vw;
+}
+ 
+.challenge-design-banner .text-wrap h1 {
+  line-height: 1.15;
+  margin-bottom: 2vw;
+}
+
+.challenge-design-banner .text-wrap a img {
+  width: 2.34vw;
+  border-radius: 50%;
+  box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+}
+
+.challenge-design-banner .banner-scroll svg {
+  top: 34.8vw;
+  transform: translateX(-66%);
+}
+
+.challenge-design-banner .author {
+  margin-bottom: 2.4vw;
+}
+
+.challenge-design-banner .author .top {
+  margin-bottom: 1.3vw;
+}
+
+.challenge-design-banner .author .top a {
+  display: flex;
+}
+
+.challenge-design-banner .author .top a {
+  display: flex;
+  align-items: center;
+  line-height: 1.375;
+}
+
+.challenge-design-banner .author .top img {
+  width: 2.6vw;
+  height: 2.6vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-right: .78vw;
+}
+
+.challenge-design-banner .author .bottom {
+  display: flex;
+  align-items: center;
+}
+
+.challenge-design-banner .author .bottom > *:not(:last-child) {
+  margin-right: 2.34vw;
+}
+
+.challenge-design-banner .share img {
+  width: 2.34vw;
+  border-radius: 50%;
+  box-shadow: 0 -5px 55px rgb(0 0 0 / 10%);
+}
+
+.challenge-design-banner .cards h2 {
+  margin-bottom: 1.5vw;
+}
+
+.challenge-design-banner .cards ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -.5vw;
+}
+
+.challenge-design-banner .cards ul li {
+  flex: 0 0 25%;
+}
+
+@media (max-width: 1023.98px) {
+  .challenge-design-banner {
+    padding: 0 4.93vw;
+    padding-top: 0vw;
+    padding-bottom: 10vw;
+    position: relative;
+  }
+
+  .challenge-design-banner .breadcrumbs {
+    position: absolute;
+    top: 83vw;
+    left: 4.93vw;
+  }
+
+  .challenge-design-banner .container {
+    width: 100%;
+  }
+
+  .challenge-design-banner .row {
+    display: block;
+  }
+
+  .challenge-design-banner .row > .img {
+    margin-bottom: 12.73vw;
+  }
+  
+  .challenge-design-banner .row > .img img {
+    width: 100%;
+    height: 83vw;
+    border-radius: 2.66vw;
+    border-top-left-radius: 20vw;
+  }
+  
+  .challenge-design-banner .row > .text {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .challenge-design-banner .text-wrap h1 {
+    margin-bottom: 5vw;
+  }
+
+  .challenge-design-banner .author {
+    margin-bottom: 10.7vw;
+  }
+  
+  .challenge-design-banner .author .top {
+    margin-bottom: 4vw;
+  }
+
+  .challenge-design-banner .author .top a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .challenge-design-banner .author .top img {
+    width: 11.33vw;
+    height: 11.33vw;
+    margin-right: 3.33vw;
+  }
+  
+  .challenge-design-banner .author .bottom {
+    display: flex;
+    align-items: center;
+  }
+  
+  .challenge-design-banner .author .bottom > *:not(:last-child) {
+    margin-right: 8vw;
+  }
+  
+  .challenge-design-banner .share img {
+    width: 10.4vw;
+  }
+  
+  .challenge-design-banner .cards h2 {
+    margin-bottom: 6.65vw;
+    width: 50%;
+  }
+  
+  .challenge-design-banner .cards ul {
+    margin: 0 -1.73vw;
+  }
+  
+  .challenge-design-banner .cards ul li {
+    flex: 0 0 50%;
   }
 }
