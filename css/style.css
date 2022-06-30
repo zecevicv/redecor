@@ -2503,6 +2503,8 @@ body {
 .season-pass-banner {
   background-color: #F7F5F5;
   padding-bottom: 6vw;
+  position: relative;
+  overflow: hidden;
 }
 
 .season-pass-banner .container {
@@ -2815,6 +2817,11 @@ body {
   line-height: 1.15;
 }
 
+.season-pass-banner .banner-scroll svg {
+  top: 34.8vw;
+  transform: translateX(-66%);
+}
+
 @media (max-width: 1023.98px) {
   .season-pass-inner-page .season-pass-banner {
     position: relative;
@@ -2843,6 +2850,10 @@ body {
   .season-pass-inner-page .season-pass-banner h1 {
     margin: 1.33vw 0 6.65vw 0;
     padding: 0;
+  }
+
+  .season-pass-banner .banner-scroll {
+    display: none;
   }
 }
 
