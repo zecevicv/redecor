@@ -30,6 +30,10 @@ body {
   color: #FF674F;
 }
 
+.text-green {
+  color: #1ABEB9;
+}
+
 /* #Btn
 ================================================== */
 .btn {
@@ -480,11 +484,17 @@ body {
   padding: .6vw;
   transition: all .4s ease;
   border-radius: .5vw;
+  position: relative;
 }
 
 .card-4:hover {
   background-color: white;
   box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+}
+
+.card-4 .img {
+  position: relative;
+  overflow: hidden;
 }
 
 .card-4 .img img {
@@ -500,6 +510,25 @@ body {
   line-height: 1.2;
 }
 
+.card-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.card-lock {
+  position: absolute;
+  top: 1.2vw;
+  left: 1.2vw;
+}
+
+.card-lock img {
+  width: 1.5vw;
+}
+
 @media (max-width: 1023.98px) {
   .card-4 {
     padding: 1.73vw 1.73vw 4vw 1.73vw;
@@ -513,6 +542,19 @@ body {
   
   .card-4 .text {
     padding-top: 2vw;
+  }
+
+  .card-img-overlay {
+    font-size: 8vw;
+  }
+
+  .card-lock {
+    top: 3.33vw;
+    left: 3.33vw;
+  }
+  
+  .card-lock img {
+    width: 7.73vw;
   }
 }
 
@@ -1279,7 +1321,8 @@ body {
   flex: 0 0 48.95vw;
 }
 
-.media-section .img img {
+.media-section .img img,
+.media-section .img video {
   width: 100%;
   height: 44.68vw;
   object-fit: cover;
@@ -1319,7 +1362,8 @@ body {
     padding-bottom: 18.3vw;
   }
   
-  .media-section .img img {
+  .media-section .img img,
+  .media-section .img video {
     width: 100%;
     height: 86.8vw;
     border-bottom-right-radius: 2.66vw;
@@ -1342,6 +1386,69 @@ body {
   
   .media-section .bg {
     display: none;
+  }
+}
+
+/* #Media Section Alt
+================================================== */
+.media-section.alt {
+  padding: 0;
+}
+
+.media-section.alt .img {
+  flex: 0 0 49.27vw;
+}
+
+.media-section.alt .img img,
+.media-section.alt .img video {
+  height: 34.7vw;
+}
+
+.media-section.alt h2 {
+  line-height: 1.34;
+  margin-bottom: 2vw;
+}
+
+.media-section.alt .text p {
+  margin: 0;
+}
+
+.media-section.alt .text a {
+  display: flex;
+  align-items: center;
+  margin-top: 2.34vw;
+}
+
+.media-section.alt .text a img {
+  width: 2.86vw;
+  margin-right: .6vw;
+}
+
+@media (max-width: 1023.98px) {
+  .media-section.alt {
+    padding: 0 4.93vw;
+  }
+  
+  .media-section.alt .img img,
+  .media-section.alt .img video {
+    height: 86.66vw;
+  }
+  
+  .media-section.alt h2 {
+    margin-bottom: 2.66vw;
+  }
+  
+  .media-section.alt .text p {
+    margin: 0;
+  }
+  
+  .media-section.alt .text a {
+    margin-top: 5.33vw;
+  }
+  
+  .media-section.alt .text a img {
+    width: 10.4vw;
+    margin-right: 2.6vw;
   }
 }
 
@@ -2677,5 +2784,166 @@ body {
   
   .challenge-design-banner .cards ul li {
     flex: 0 0 50%;
+  }
+}
+
+/* #Season Pass Inner Page Overrides
+================================================== */
+.season-pass-inner-page {
+  background-color: #F7F5F5;
+}
+
+/* Banner */
+.season-pass-inner-page .season-pass-card {
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.season-pass-inner-page .season-pass-card .img {
+  flex: 0 0 38.8vw;
+}
+
+.season-pass-inner-page .season-pass-card .img img {
+  height: 39vw;
+  border-radius: 1.04vw;
+  border-top-left-radius: 10.4vw;
+}
+
+.season-pass-inner-page .season-pass-banner h1 {
+  margin: .5vw 0 2.34vw 0;
+  line-height: 1.15;
+}
+
+@media (max-width: 1023.98px) {
+  .season-pass-inner-page .season-pass-banner {
+    position: relative;
+  }
+
+  .season-pass-inner-page .breadcrumbs {
+    position: absolute;
+    top: 83vw;
+    left: 0;
+  }
+
+  .season-pass-inner-page .season-pass-card {
+    padding: 0 4.93vw;
+  }
+
+  .season-pass-inner-page .season-pass-card .text {
+    margin-top: 15.73vw;
+  }
+
+  .season-pass-inner-page .season-pass-card .img img {
+    height: 83vw;
+    border-radius: 2.66vw;
+    border-top-left-radius: 20vw;
+  }
+
+  .season-pass-inner-page .season-pass-banner h1 {
+    margin: 1.33vw 0 6.65vw 0;
+    padding: 0;
+  }
+}
+
+/* Card Slider 2 */
+.season-pass-inner-page .card-slider-2 {
+  background-color: #F7F5F5;
+  padding: 1.8vw 0 5.8vw 0;
+}
+
+.season-pass-inner-page .card-slider-2 .swiper {
+  padding-bottom: 2vw;
+}
+
+@media (max-width: 1023.98px) {
+  .season-pass-inner-page .card-slider-2 {
+    padding: 0 0 20vw 0;
+  }
+  
+  .season-pass-inner-page .card-slider-2 .swiper {
+    padding-bottom: 2vw;
+  }
+
+  .season-pass-inner-page .card-slider-2 .container {
+    padding: 0;
+  }
+}
+
+/* #Season Pass Items
+================================================== */
+.season-pass-items {
+  padding: 7.8vw 0;
+}
+
+.season-pass-items .container {
+  width: 78.9%;
+}
+
+.season-pass-items h2 {
+  margin-bottom: 1.5vw;
+}
+
+.season-pass-items ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -.5vw;
+}
+
+.season-pass-items ul li {
+  flex: 0 0 14.28%;
+  padding: 0 .78vw;
+  margin-bottom: 1.5vw;
+}
+
+.season-pass-items .card-4 {
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .season-pass-items .card-4 .img img {
+    height: 8.54vw;
+  }
+
+  .season-pass-items .card-4 .text {
+    padding-top: 0.6vw;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .season-pass-items {
+    padding: 20vw 0;
+  }
+  
+  .season-pass-items .container {
+    width: 100%;
+    padding: 0 4.93vw;
+  }
+
+  .season-pass-items h2 {
+    margin-bottom: 6.65vw;
+  }
+  
+  .season-pass-items ul {
+    margin: -2.4vw -1.6vw;
+  }
+  
+  .season-pass-items ul li {
+    flex: 0 0 50%;
+    padding: 2.4vw 1.6vw;
+  }
+
+  .season-pass-items .card-4 {
+    background-color: white;
+  }
+
+  .season-pass-items .card-4 .text {
+    padding-top: 4vw;
+    padding-bottom: 0;
+    padding-left: 1.6vw;
+  }
+
+  .season-pass-items .card-4 .img img {
+    height: 40.93vw;
   }
 }
