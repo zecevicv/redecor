@@ -88,7 +88,7 @@ if (document.querySelector('.card-slider-2 .swiper')) {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1.2,
+        slidesPerView: 1.27,
         loop: true
       },
       1024: {
