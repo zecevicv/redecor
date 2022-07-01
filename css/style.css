@@ -22,7 +22,7 @@ body {
 
 @media (max-width: 1023.98px) {
   body {
-    padding-top: 17.5vw;
+    padding-top: 17vw;
   }
 }
 
@@ -47,6 +47,7 @@ body {
   background-color: transparent;
   border: none;
   border: 1px solid transparent;
+  transition: all .4s ease;
 }
 
 .btn img {
@@ -58,6 +59,10 @@ body {
   color: white;
   background-color: #FF674F;
   border-radius: 500px;
+}
+
+.btn.btn-primary:hover {
+  background-color: black;
 }
 
 .btn.btn-secondary {
@@ -82,7 +87,7 @@ body {
     width: 5vw;
     margin-left: 11.33vw;
   }
-  
+
   .btn.btn-small {
     height: 8.66vw;
     padding: 0 5.33vw;
@@ -139,10 +144,21 @@ body {
   .link::before {
     transform: scaleX(1);
   }
+
+  .header .link,
+  .footer .link {
+    padding: 0;
+  }
+
+  .header .link::before,
+  .footer .link::before {
+    display: none;
+  }
 }
 
 /* #Input
 ================================================== */
+/* Primary */
 .input-primary {
   font-family: inherit;
   background-color: white;
@@ -159,6 +175,116 @@ body {
 @media (max-width: 1023.98px) {
   .input-primary {
     padding: 0 4vw;
+  }
+}
+
+/* Secondary */
+.input-secondary {
+  font-family: inherit;
+  display: block;
+  color: #BFBFBF;
+  padding: .78vw 0;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.input-secondary::placeholder {
+  color: #BFBFBF;
+}
+
+@media (max-width: 1023.98px) {
+  .input-secondary {
+    border: 1px solid #BFBFBF;
+    height: 12vw;
+    border-radius: 500px;
+    padding: 0 4vw;
+  }
+}
+
+/* #Select
+================================================== */
+.select-primary {
+  font-family: inherit;
+  display: block;
+  color: #BFBFBF;
+  padding: .78vw 0;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #BFBFBF;
+  appearance: none;
+
+  background-image: url('../img/icons/chevron-down-orange.svg');
+  background-repeat: no-repeat;
+  background-size: .5vw auto;
+  background-position: 100% 50%;
+}
+
+@media (max-width: 1023.98px) {
+  .select-primary {
+    border: 1px solid #BFBFBF;
+    height: 12vw;
+    border-radius: 500px;
+    padding: 0 4vw;
+    background-size: 2.66vw auto;
+    background-position: 93% 50%;
+  }
+}
+
+/* #Textarea
+================================================== */
+.textarea-primary {
+  font-family: inherit;
+  display: block;
+  color: #BFBFBF;
+  padding: .78vw 0;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #BFBFBF;
+  resize: none;
+}
+
+@media (max-width: 1023.98px) {
+  .textarea-primary {
+    padding: 4vw;
+    border: 1px solid #BFBFBF;
+    border-radius: 1.33vw;
+    height: 42vw;
+  }
+}
+
+/* #Upload
+================================================== */
+.upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 5.2vw;
+  border: 1px dashed #FF674F;
+  border-radius: .5vw;
+}
+
+.upload img {
+  width: 1.8vw;
+  margin-bottom: .5vw;
+}
+
+@media (max-width: 1023.98px) {
+  .upload {
+    height: 29.73vw;
+    border-radius: 1.33vw;
+    padding: 0 14%;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  .upload img {
+    width: 8.66vw;
+    margin-bottom: 2.66vw;
   }
 }
 
@@ -192,7 +318,8 @@ body {
 
 /* #Swiper Pagination
 ================================================== */
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0;
 }
 
@@ -276,21 +403,21 @@ body {
   .card-1 {
     border-radius: 2.66vw;
   }
-  
+
   .card-1 .img img {
     height: 78.13vw;
   }
-  
+
   .card-1 .text {
     bottom: 4vw;
     left: 4vw;
     width: 41vw;
   }
-  
+
   .card-1 h3 {
     margin-bottom: 3.33vw;
   }
-  
+
   .card-1 h3 img {
     width: 3vw;
     margin-left: 2vw;
@@ -308,7 +435,7 @@ body {
 ================================================== */
 .card-2 {
   background-color: white;
-  box-shadow: 0 -5px 25px rgba(0,0,0,.1);
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, .1);
   border-radius: 1.33vw;
   padding: .67vw .67vw 1.3vw .67vw;
 }
@@ -354,16 +481,16 @@ body {
   .card-2 .img {
     border-radius: 2.66vw;
   }
-  
+
   .card-2 .img img {
     height: 56.26vw;
     border-radius: 2.66vw;
   }
-  
+
   .card-2 .text {
     margin-top: 4vw;
   }
-  
+
   .card-2 h3 {
     line-height: 1.35;
     margin: 2vw 0 8.66vw 0;
@@ -441,37 +568,37 @@ body {
   .card-3 {
     border-radius: 0;
   }
-  
+
   .card-3 .img {
     border-radius: 2.66vw;
   }
-  
+
   .card-3 .img a::after {
     display: none;
   }
-  
+
   .card-3 .img img {
     height: 44.66vw;
   }
-  
+
   .card-3 .author {
     position: static;
     color: black;
     width: 100%;
     margin-top: 2vw;
   }
-  
+
   .card-3 .author a {
     display: flex;
     align-items: center;
   }
-  
+
   .card-3 .author img {
     width: 6.4vw;
     height: 6.4vw;
     margin-right: 2vw;
   }
-  
+
   .card-3 .rating {
     top: 2vw;
     left: 2vw;
@@ -489,7 +616,7 @@ body {
 
 .card-4:hover {
   background-color: white;
-  box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
 }
 
 .card-4 .img {
@@ -534,12 +661,12 @@ body {
     padding: 1.73vw 1.73vw 4vw 1.73vw;
     border-radius: 2.66vw;
   }
-  
+
   .card-4 .img img {
     height: 44.66vw;
     border-radius: 2.66vw;
   }
-  
+
   .card-4 .text {
     padding-top: 2vw;
   }
@@ -552,7 +679,7 @@ body {
     top: 3.33vw;
     left: 3.33vw;
   }
-  
+
   .card-lock img {
     width: 7.73vw;
   }
@@ -585,7 +712,7 @@ body {
     margin-right: .8vw;
     margin-bottom: .7vw;
   }
-  
+
   .rating.rating-label {
     height: 6.26vw;
     padding: 0 2vw;
@@ -602,6 +729,12 @@ body {
   background-color: #F7F5F5;
   z-index: 10000;
   padding: 1vw 0;
+  transition: all .4s ease;
+}
+
+.header.header-white {
+  background-color: white;
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
 }
 
 .header .container {
@@ -646,6 +779,7 @@ body {
 .header .collapse-toggler {
   display: flex;
   align-items: center;
+  padding: .78vw 0;
 }
 
 .header .collapse-toggler img {
@@ -784,6 +918,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0;
   }
 
   .header .collapse-toggler img {
@@ -866,8 +1001,12 @@ body {
 }
 
 .footer-main .collapse a {
-  margin: .6vw 0;
+  margin: .4vw 0;
   display: block;
+}
+
+.footer-main .collapse li {
+  display: flex;
 }
 
 .footer-main .social ul {
@@ -1248,7 +1387,7 @@ body {
   line-height: 1.66;
 }
 
-.faq .collapse > div {
+.faq .collapse>div {
   padding-top: 1.3vw;
 }
 
@@ -1277,31 +1416,31 @@ body {
   .faq {
     padding: 30.66vw 0 14vw 0;
   }
-  
+
   .faq .container {
     width: 90%;
   }
-  
+
   .faq h2 {
     text-align: left;
     margin-bottom: 6vw;
     width: 75%;
     line-height: 1.34;
   }
-  
+
   .faq .collapsible {
     padding: 5.33vw 0 6vw 0;
   }
-  
-  .faq .collapse > div {
+
+  .faq .collapse>div {
     padding-top: 4vw;
   }
-  
+
   /* Bg Elements */
   .faq .bg-1 img {
     width: 25.6vw;
   }
-  
+
   .faq .bg-2 {
     display: none;
   }
@@ -1361,7 +1500,7 @@ body {
     padding-top: 14vw;
     padding-bottom: 18.3vw;
   }
-  
+
   .media-section .img img,
   .media-section .img video {
     width: 100%;
@@ -1369,21 +1508,21 @@ body {
     border-bottom-right-radius: 2.66vw;
     border-top-right-radius: 26.6vw;
   }
-  
+
   .media-section .text {
     margin-left: 0;
     margin-top: 4vw;
   }
-  
+
   .media-section h2 {
     line-height: 1.34;
   }
-  
+
   .media-section p {
     margin: 4vw 0 5.33vw 0;
     line-height: 1.5;
   }
-  
+
   .media-section .bg {
     display: none;
   }
@@ -1428,24 +1567,24 @@ body {
   .media-section.alt {
     padding: 0 4.93vw;
   }
-  
+
   .media-section.alt .img img,
   .media-section.alt .img video {
     height: 86.66vw;
   }
-  
+
   .media-section.alt h2 {
     margin-bottom: 2.66vw;
   }
-  
+
   .media-section.alt .text p {
     margin: 0;
   }
-  
+
   .media-section.alt .text a {
     margin-top: 5.33vw;
   }
-  
+
   .media-section.alt .text a img {
     width: 10.4vw;
     margin-right: 2.6vw;
@@ -1489,7 +1628,7 @@ body {
   border-radius: 1.04vw;
   border-top-left-radius: 10.4vw;
   overflow: hidden;
-  box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
   background-color: white;
 }
 
@@ -1565,44 +1704,44 @@ body {
     display: block;
     border-radius: 0;
     border-top-left-radius: 26.6vw;
-    box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+    box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
     padding: 4.93vw 4.93vw 8vw 4.93vw;
   }
-  
+
   .season-pass-card .img img {
     height: 71.6vw;
     border-bottom-left-radius: 2.66vw;
     border-top-left-radius: 26.6vw;
   }
-  
+
   .season-pass-card .text {
     margin-left: 0;
     margin-top: 5.33vw;
   }
-  
+
   .season-pass-card h2 {
     line-height: 1.34;
     margin-bottom: 2vw;
   }
-  
+
   .season-pass-card .numbers {
     margin-bottom: 5.33vw;
   }
-  
+
   .season-pass-card .numbers ul li:not(:last-child) {
     padding-right: 5.33vw;
     margin-right: 5.33vw;
   }
-  
+
   .season-pass-card .numbers ul li:not(:last-child)::after {
     top: .78vw;
     height: 6.65vw;
   }
-  
+
   .season-pass-card .btn {
     margin-top: 8vw;
   }
-  
+
   .season-pass-card .bg img {
     width: 30.4vw;
   }
@@ -1668,33 +1807,33 @@ body {
   .card-slider-1 {
     padding: 14.4vw 0 16vw 0;
   }
-  
+
   .card-slider-1 .heading {
     width: 100%;
     padding: 0 4.93vw;
     display: block;
     margin-bottom: 8.66vw;
   }
-  
+
   .card-slider-1 .heading h2 {
     margin-bottom: 4vw;
   }
-  
+
   .card-slider-1 .heading p {
     line-height: 1.5;
   }
-  
+
   .card-slider-1 .link-wrap {
     padding-left: 0;
     display: flex;
     justify-content: center;
     margin-top: 11vw;
   }
-  
+
   .card-slider-1 .swiper {
     padding-bottom: 11vw;
   }
-  
+
   .card-slider-1 .swiper-slide {
     padding: 0 2vw;
   }
@@ -1743,7 +1882,7 @@ body {
 /* Swiper Arrows */
 .card-slider-2 .swiper-arrows img {
   box-shadow: none;
-  border: 1px solid black;  
+  border: 1px solid black;
 }
 
 .card-slider-2 .prev {
@@ -1786,7 +1925,7 @@ body {
     position: relative;
     padding: 27.46vw 0 24vw 0;
   }
-  
+
   .card-slider-2 .container {
     position: relative;
     z-index: 1;
@@ -1804,7 +1943,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .card-slider-2 .swiper {
     position: relative;
     padding-top: 4.66vw;
@@ -1816,22 +1955,22 @@ body {
   .card-slider-2 .swiper-slide {
     padding: 0 2vw;
   }
-  
+
   .card-slider-2 .swiper-pagination {
     text-align: center;
     padding-left: 2vw;
   }
-  
+
   /* Swiper Arrows */
   .card-slider-2 .swiper-arrows {
     display: none;
   }
-  
+
   /* Bg Elements */
   .card-slider-2 .bg-1 img {
     width: 28.66vw;
   }
-  
+
   .card-slider-2 .bg-2 img {
     width: 50vw;
   }
@@ -1946,22 +2085,22 @@ body {
   .card-slider-3 {
     padding: 13.3vw 0 37vw 0;
   }
-  
+
   .card-slider-3 .heading {
     width: 100%;
     padding: 0 4.93vw;
     display: block;
     margin-bottom: 8.66vw;
   }
-  
+
   .card-slider-3 .heading h2 {
     margin-bottom: 4vw;
   }
-  
+
   .card-slider-3 .heading p {
     line-height: 1.5;
   }
-  
+
   .card-slider-3 .link-wrap {
     padding-left: 0;
     display: flex;
@@ -1973,11 +2112,11 @@ body {
     left: 0;
     width: 100%;
   }
-  
+
   .card-slider-3 .swiper {
     padding-bottom: 11vw;
   }
-  
+
   .card-slider-3 .swiper-slide {
     padding: 0 2vw;
   }
@@ -2012,7 +2151,7 @@ body {
   padding-left: 10.52vw;
 }
 
-.home-banner .swiper-slide > div {
+.home-banner .swiper-slide>div {
   display: flex;
   justify-content: space-between;
 }
@@ -2055,7 +2194,7 @@ body {
 
 .home-banner .swiper-arrows img {
   box-shadow: none;
-  border: 1px solid black;  
+  border: 1px solid black;
 }
 
 /* Banner Scroll */
@@ -2068,9 +2207,9 @@ body {
   user-select: none;
 }
 
-.banner-scroll svg textPath { 
+.banner-scroll svg textPath {
   font-size: 1.7vw;
-	fill: #111;
+  fill: #111;
   background: #333;
 }
 
@@ -2090,7 +2229,7 @@ body {
     display: block;
   }
 
-  .home-banner .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+  .home-banner .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
   .home-banner .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 8px;
   }
@@ -2104,43 +2243,43 @@ body {
   .home-banner .swiper {
     padding-bottom: 17.33vw;
   }
-  
+
   .home-banner .swiper-slide {
     padding-left: 4.93vw;
   }
-  
-  .home-banner .swiper-slide > div {
+
+  .home-banner .swiper-slide>div {
     display: flex;
     flex-direction: column-reverse;
     justify-content: stretch;
   }
-  
+
   .home-banner .swiper-slide .text {
     flex: 0;
     padding-top: 9.33vw;
   }
-  
+
   .home-banner .swiper-slide h1,
   .home-banner .swiper-slide h2 {
     margin-bottom: 5.33vw;
     line-height: 1.1;
   }
-  
+
   .home-banner .swiper-slide .btn {
     margin-top: 6.65vw;
   }
-  
+
   .home-banner .swiper-slide .img {
     flex: 0;
   }
-  
+
   .home-banner .swiper-slide .img img,
   .home-banner .swiper-slide .img video {
     height: 96.6vw;
     border-bottom-left-radius: 2.66vw;
     border-top-left-radius: 20vw;
   }
-  
+
   .home-banner .swiper-arrows {
     display: none;
   }
@@ -2169,7 +2308,7 @@ body {
   .breadcrumbs {
     padding: 3.33vw 0 8.66vw 0;
   }
-  
+
   .breadcrumbs .container {
     width: 100%;
     padding: 0 4.93vw;
@@ -2228,7 +2367,7 @@ body {
 
 .challenge .card-1,
 .challenge .challenge-img {
-  box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
   border-radius: 1.04vw;
 }
 
@@ -2236,21 +2375,21 @@ body {
   .challenge-page {
     background-color: #F7F5F5;
   }
-  
+
   .challenge {
     padding-bottom: 20vw;
   }
-  
+
   .challenge .container {
     width: 100%;
     padding: 0 4.93vw;
   }
-  
+
   .challenge ul {
     display: block;
     margin: 0;
   }
-  
+
   .challenge ul li {
     padding: 0;
   }
@@ -2258,16 +2397,16 @@ body {
   .challenge ul li:not(:last-child) {
     margin-bottom: 4.8vw;
   }
-  
+
   .challenge .challenge-img img {
     border-radius: 2.66vw;
   }
-  
+
   .challenge .heading {
     height: 100%;
     margin-bottom: 9.33vw;
   }
-  
+
   .challenge h1 {
     margin-bottom: 4.8vw;
   }
@@ -2287,7 +2426,7 @@ body {
 ================================================== */
 .error-page {
   background-color: #F7F5F5;
-  padding-top: 0!important;
+  padding-top: 0 !important;
 }
 
 .error {
@@ -2329,7 +2468,7 @@ body {
   .error .text h1 {
     font-size: 43vw;
   }
-  
+
   .error .text p {
     margin: 4vw auto 6.65vw auto;
     width: 60%;
@@ -2376,7 +2515,7 @@ body {
   flex: 0 0 28.9vw;
   margin-left: 6.4vw;
 }
- 
+
 .challenge-inner-banner .text h1 {
   line-height: 1.15;
 }
@@ -2388,7 +2527,7 @@ body {
 .challenge-inner-banner .text a img {
   width: 2.34vw;
   border-radius: 50%;
-  box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
 }
 
 .challenge-inner-banner .banner-scroll svg {
@@ -2421,19 +2560,19 @@ body {
   .challenge-inner-banner .img {
     margin-bottom: 15.73vw;
   }
-  
+
   .challenge-inner-banner .img img {
     width: 100%;
     height: 83vw;
     border-radius: 2.66vw;
     border-top-left-radius: 20vw;
   }
-  
+
   .challenge-inner-banner .text {
     margin-left: 0;
     margin-top: 0;
   }
-  
+
   .challenge-inner-banner .text p {
     margin: 5.33vw 0 6.65vw 0;
     line-height: 1.5;
@@ -2478,20 +2617,20 @@ body {
     padding-bottom: 20vw;
     background-color: #F7F5F5;
   }
-  
+
   .challenge-inner .container {
     width: 100%;
     padding: 0 4.93vw;
   }
-  
+
   .challenge-inner .heading {
     margin-bottom: 6.65vw;
   }
-  
+
   .challenge-inner ul {
     margin: -2.66vw -1.66vw;
   }
-  
+
   .challenge-inner ul li {
     flex: 0 0 50%;
     padding: 2.66vw 1.66vw;
@@ -2519,11 +2658,11 @@ body {
   .season-pass-banner {
     padding-bottom: 17.33vw;
   }
-  
+
   .season-pass-banner .container {
     width: 100%;
   }
-  
+
   .season-pass-banner h1 {
     margin: 0 0 6vw 0;
   }
@@ -2565,21 +2704,21 @@ body {
   .season-pass {
     padding-bottom: 20vw;
   }
-  
+
   .season-pass .container {
     width: 100%;
     padding: 0 4.93vw;
   }
-  
+
   .season-pass h2 {
     margin-bottom: 6.4vw;
   }
-  
+
   .season-pass ul {
     display: block;
     margin: 0;
   }
-  
+
   .season-pass ul li {
     padding: 0;
   }
@@ -2610,11 +2749,11 @@ body {
   position: relative;
 }
 
-.challenge-design-banner .row > .img {
+.challenge-design-banner .row>.img {
   flex: 0 0 38.8vw;
 }
 
-.challenge-design-banner .row > .img img {
+.challenge-design-banner .row>.img img {
   width: 100%;
   height: 39vw;
   object-fit: cover;
@@ -2623,12 +2762,12 @@ body {
   border-top-left-radius: 10.4vw;
 }
 
-.challenge-design-banner .row > .text {
+.challenge-design-banner .row>.text {
   flex-grow: 1;
   margin-left: 6.4vw;
   padding-top: 2.6vw;
 }
- 
+
 .challenge-design-banner .text-wrap h1 {
   line-height: 1.15;
   margin-bottom: 2vw;
@@ -2637,7 +2776,7 @@ body {
 .challenge-design-banner .text-wrap a img {
   width: 2.34vw;
   border-radius: 50%;
-  box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
 }
 
 .challenge-design-banner .banner-scroll svg {
@@ -2677,7 +2816,7 @@ body {
   align-items: center;
 }
 
-.challenge-design-banner .author .bottom > *:not(:last-child) {
+.challenge-design-banner .author .bottom>*:not(:last-child) {
   margin-right: 2.34vw;
 }
 
@@ -2723,18 +2862,18 @@ body {
     display: block;
   }
 
-  .challenge-design-banner .row > .img {
+  .challenge-design-banner .row>.img {
     margin-bottom: 12.73vw;
   }
-  
-  .challenge-design-banner .row > .img img {
+
+  .challenge-design-banner .row>.img img {
     width: 100%;
     height: 83vw;
     border-radius: 2.66vw;
     border-top-left-radius: 20vw;
   }
-  
-  .challenge-design-banner .row > .text {
+
+  .challenge-design-banner .row>.text {
     margin-left: 0;
     margin-top: 0;
   }
@@ -2746,7 +2885,7 @@ body {
   .challenge-design-banner .author {
     margin-bottom: 10.7vw;
   }
-  
+
   .challenge-design-banner .author .top {
     margin-bottom: 4vw;
   }
@@ -2755,35 +2894,35 @@ body {
     display: flex;
     align-items: center;
   }
-  
+
   .challenge-design-banner .author .top img {
     width: 11.33vw;
     height: 11.33vw;
     margin-right: 3.33vw;
   }
-  
+
   .challenge-design-banner .author .bottom {
     display: flex;
     align-items: center;
   }
-  
-  .challenge-design-banner .author .bottom > *:not(:last-child) {
+
+  .challenge-design-banner .author .bottom>*:not(:last-child) {
     margin-right: 8vw;
   }
-  
+
   .challenge-design-banner .share img {
     width: 10.4vw;
   }
-  
+
   .challenge-design-banner .cards h2 {
     margin-bottom: 6.65vw;
     width: 50%;
   }
-  
+
   .challenge-design-banner .cards ul {
     margin: 0 -1.73vw;
   }
-  
+
   .challenge-design-banner .cards ul li {
     flex: 0 0 50%;
   }
@@ -2871,7 +3010,7 @@ body {
   .season-pass-inner-page .card-slider-2 {
     padding: 0 0 20vw 0;
   }
-  
+
   .season-pass-inner-page .card-slider-2 .swiper {
     padding-bottom: 2vw;
   }
@@ -2925,7 +3064,7 @@ body {
   .season-pass-items {
     padding: 20vw 0;
   }
-  
+
   .season-pass-items .container {
     width: 100%;
     padding: 0 4.93vw;
@@ -2934,11 +3073,11 @@ body {
   .season-pass-items h2 {
     margin-bottom: 6.65vw;
   }
-  
+
   .season-pass-items ul {
     margin: -2.4vw -1.6vw;
   }
-  
+
   .season-pass-items ul li {
     flex: 0 0 50%;
     padding: 2.4vw 1.6vw;
@@ -3003,7 +3142,7 @@ body {
     background-color: white;
     padding: 1vw 3.125vw;
     border-radius: 500px;
-    box-shadow: 0 -5px 55px rgba(0,0,0,.1);
+    box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
   }
 }
 
@@ -3012,7 +3151,7 @@ body {
     margin-bottom: 10.4vw;
     position: relative;
   }
-  
+
   .blog-banner .container {
     width: 100%;
     padding: 0;
@@ -3021,14 +3160,14 @@ body {
   .blog-banner .img {
     padding: 0 4.93vw;
   }
-  
+
   .blog-banner .img img {
     height: 70.4vw;
     border-radius: 2.66vw;
     border-top-left-radius: 20vw;
     border-top-right-radius: 20vw;
   }
-  
+
   .blog-banner .text {
     top: 17vw;
     transform: translateX(-50%);
@@ -3089,11 +3228,11 @@ body {
   .blog-page .card-slider-2:not(:last-child) {
     margin-bottom: 13.33vw;
   }
-  
+
   .blog-page .card-slider-2:last-child {
     margin-bottom: 18vw;
   }
-  
+
   .blog-page .card-slider-2 .swiper {
     padding-bottom: 2vw;
     overflow: visible;
@@ -3101,5 +3240,987 @@ body {
 
   .blog-page .card-slider-2 .container {
     padding: 0;
+  }
+}
+
+/* #Blog Inner
+================================================== */
+.blog-inner-page {
+  background-color: #F7F5F5;
+}
+
+.blog-inner {
+  background-color: #F7F5F5;
+  padding-bottom: 7.8vw;
+}
+
+.blog-inner .container {
+  width: 78.9%;
+}
+
+.blog-inner .heading {
+  margin: 2.5vw 0 3.9vw 0;
+  line-height: 1;
+}
+
+.blog-inner-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -.7vw;
+}
+
+.blog-inner-item {
+  flex: 0 0 25%;
+  padding: .7vw;
+}
+
+.blog-inner-item.alt {
+  flex: 0 0 50%;
+}
+
+.blog-inner .blog-inner-item-img img {
+  width: 100%;
+  height: 26.4vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1.04vw;
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
+}
+
+.blog-inner .season-pass-item>div {
+  position: relative;
+}
+
+.blog-inner .season-pass-item .bg img {
+  width: 100%;
+  height: 26.4vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1.04vw;
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
+}
+
+.blog-inner .season-pass-item .text {
+  position: absolute;
+  left: 1.5vw;
+  top: 1.8vw;
+}
+
+.blog-inner .season-pass-item h2 {
+  line-height: 1.34;
+  margin-bottom: 1.2vw;
+}
+
+.blog-inner .season-pass-item .numbers {
+  margin-bottom: 1.5vw;
+}
+
+.blog-inner .season-pass-item .numbers ul {
+  display: flex;
+}
+
+.blog-inner .season-pass-item .numbers ul li {
+  position: relative;
+  line-height: 1.2;
+}
+
+.blog-inner .season-pass-item .numbers ul li:not(:first-child) {
+  text-align: center;
+}
+
+.blog-inner .season-pass-item .numbers ul li:not(:last-child) {
+  padding-right: 1.3vw;
+  margin-right: 1.3vw;
+}
+
+.blog-inner .season-pass-item .numbers ul li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: .35vw;
+  width: 1px;
+  height: 1.5vw;
+  background-color: #C2C2C2;
+}
+
+.blog-inner .season-pass-item .btn {
+  margin-top: 2.6vw;
+}
+
+@media (max-width: 1023.98px) {
+  .blog-inner {
+    padding-bottom: 20vw;
+  }
+
+  .blog-inner .container {
+    width: 100%;
+    padding: 0 4.93vw;
+  }
+
+  .blog-inner .heading {
+    margin: 0 0 6vw 0;
+    line-height: 1.15;
+    width: 75%;
+  }
+
+  .blog-inner-list {
+    display: block;
+    margin: 0;
+  }
+
+  .blog-inner-item {
+    padding: 0;
+  }
+
+  .blog-inner-item:not(:last-child) {
+    margin-bottom: 4.93vw;
+  }
+
+  .blog-inner-item .card-2 .img img {
+    height: 69vw;
+  }
+
+  .blog-inner .blog-inner-item-img img {
+    height: 116.8vw;
+    border-radius: 2.66vw;
+  }
+
+  .blog-inner .season-pass-item .text {
+    top: 8vw;
+    left: 6vw;
+    z-index: 1;
+  }
+
+  .blog-inner .season-pass-item h2 {
+    line-height: 1.34;
+    margin-bottom: 2vw;
+  }
+
+  .blog-inner .season-pass-item .numbers {
+    margin-bottom: 5.33vw;
+  }
+
+  .blog-inner .season-pass-item .numbers ul li:not(:last-child) {
+    padding-right: 5.33vw;
+    margin-right: 5.33vw;
+  }
+
+  .blog-inner .season-pass-item .numbers ul li:not(:last-child)::after {
+    top: .78vw;
+    height: 6.65vw;
+  }
+
+  .blog-inner .season-pass-item .btn {
+    margin-top: 8vw;
+  }
+
+  .blog-inner .season-pass-item>div {
+    padding-top: 17.33vw;
+    background-color: white;
+    border-radius: 2.66vw;
+    overflow: hidden;
+  }
+
+  .blog-inner .season-pass-item>div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-image: linear-gradient(to bottom, white, transparent);
+  }
+
+  .blog-inner .season-pass-item>div::before {
+    content: '';
+    position: absolute;
+    top: 16%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(to bottom, white, transparent);
+  }
+
+  .blog-inner .season-pass-item .bg img {
+    height: 116.8vw;
+    border-radius: 2.66vw;
+    margin-top: 17.33vw;
+  }
+}
+
+/* #Blog Post Page Overrides
+================================================== */
+.blog-post-page {
+  background-color: #F7F5F5;
+}
+
+.blog-post-page .card-slider-2 {
+  padding: 6.77vw 0 4.77vw 0;
+}
+
+.blog-post-page .card-slider-2 .swiper {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+@media (max-width: 1023.98px) {
+  .blog-post-page .card-slider-2 {
+    padding: 17.33vw 0 15vw 0;
+  }
+
+  .blog-post-page .card-slider-2 .swiper {
+    padding-top: 4.66vw;
+    padding-bottom: 4.66vw;
+  }
+
+  .blog-post-page .card-slider-2 .heading {
+    padding-left: 4.93vw;
+    padding-right: 4.93vw;
+  }
+
+  .blog-post-page .card-slider-2 .heading a {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+  }
+
+  .blog-post-page .card-slider-2 .container {
+    padding: 0;
+  }
+}
+
+/* #Blog Post Banner
+================================================== */
+.blog-post-banner {
+  position: relative;
+  background-color: #F7F5F5;
+}
+
+.blog-post-banner .container {
+  width: 78.9%;
+}
+
+.blog-post-banner .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-post-banner .row .text {
+  flex: 0 0 33.85vw;
+}
+
+.blog-post-banner .row h1,
+.blog-post-banner .row h2 {
+  margin-bottom: 2vw;
+  line-height: 1.25;
+}
+
+.blog-post-banner .row .btn {
+  margin-top: 3.125vw;
+}
+
+.blog-post-banner .row .img {
+  flex: 0 0 38.8vw;
+}
+
+.blog-post-banner .row .img img,
+.blog-post-banner .row .img video {
+  width: 100%;
+  height: 39vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1.04vw;
+  border-top-left-radius: 10.4vw;
+}
+
+.blog-post-banner .share {
+  margin-bottom: 2.34vw;
+}
+
+.blog-post-banner .share a {
+  display: flex;
+  align-items: center;
+}
+
+.blog-post-banner .share img {
+  width: 2.34vw;
+  border-radius: 50%;
+  box-shadow: 0 -5px 55px rgb(0 0 0 / 10%);
+  margin-right: 1.3vw;
+}
+
+.blog-post-banner .banner-scroll svg {
+  top: 35vw;
+  left: 44vw;
+}
+
+@media (max-width: 1023.98px) {
+  .blog-post-banner .container {
+    width: 100%;
+    padding: 0 4.93vw;
+  }
+
+  .blog-post-banner .row {
+    padding-left: 0;
+    border-bottom: 1px solid #C2C2C2;
+    padding-bottom: 12vw;
+  }
+
+  .blog-post-banner .row {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: stretch;
+  }
+
+  .blog-post-banner .row .text {
+    flex: 0;
+    padding-top: 9.33vw;
+  }
+
+  .blog-post-banner .row h1,
+  .blog-post-banner .row h2 {
+    margin-bottom: 5.33vw;
+    line-height: 1.5;
+  }
+
+  .blog-post-banner .row .btn {
+    margin-top: 6.65vw;
+  }
+
+  .blog-post-banner .row .img {
+    flex: 0;
+  }
+
+  .blog-post-banner .row .img img,
+  .blog-post-banner .row .img video {
+    height: 83vw;
+    border-radius: 2.66vw;
+    border-top-left-radius: 20vw;
+  }
+
+  .blog-post-banner .share {
+    margin-bottom: 6vw;
+  }
+
+  .blog-post-banner .share img {
+    width: 10.4vw;
+    margin-right: 4vw;
+  }
+}
+
+/* #Blog Post
+================================================== */
+.blog-post {
+  margin-top: 6.77vw;
+}
+
+.blog-post .container {
+  width: 38.8%;
+}
+
+.blog-post-body img {
+  width: 100%;
+  border-radius: 1.04vw;
+}
+
+.blog-post-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2vw;
+  border-top: 1px solid #C2C2C2;
+  margin-top: 2.6vw;
+}
+
+.blog-post-navigation a {
+  display: flex;
+  align-items: center;
+}
+
+.blog-post-navigation a img {
+  width: .78vw;
+}
+
+.blog-post-navigation p {
+  margin: 0 .78vw;
+}
+
+/* Font Sizes */
+.blog-post-body p,
+.blog-post-body ul,
+.blog-post-body ol {
+  font-size: 1.04vw;
+}
+
+.blog-post-body h2 {
+  font-size: 1.82vw;
+  line-height: 1.2;
+}
+
+.blog-post-body blockquote,
+.blog-post-body h3 {
+  font-size: 1.25vw;
+  font-weight: 400;
+}
+
+
+/* Margins */
+.blog-post-body p,
+.blog-post-body blockquote,
+.blog-post-body ul,
+.blog-post-body ol {
+  margin: 1vw 0 1.5vw 0;
+}
+
+.blog-post-body h2 {
+  margin: 3.125vw 0 1vw 0;
+}
+
+.blog-post-body img {
+  margin: 1.5vw 0;
+}
+
+.blog-post-body blockquote {
+  margin: 5.2vw 0 2.6vw 0;
+  position: relative;
+}
+
+.blog-post-body blockquote::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5vw;
+  height: 3.8vw;
+  background-image: url('../img/icons/quottes.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.blog-post-body blockquote::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 5vw;
+  height: 3.8vw;
+  background-image: url('../img/icons/quottes-alt.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(40%);
+}
+
+@media (max-width: 1023.98px) {
+  .blog-post {
+    margin-top: 12vw;
+  }
+
+  .blog-post .container {
+    width: 100%;
+    padding: 0 4.93vw;
+  }
+
+  .blog-post-body img {
+    width: 100%;
+    border-radius: 2.66vw;
+  }
+
+  .blog-post-navigation {
+    padding-top: 4.66vw;
+    margin-top: 12vw;
+  }
+
+  .blog-post-navigation a img {
+    width: 2.66vw;
+  }
+
+  .blog-post-navigation p {
+    margin: 0 2.66vw;
+  }
+
+  /* Font Sizes */
+  .blog-post-body p,
+  .blog-post-body ul,
+  .blog-post-body ol {
+    font-size: 4vw;
+  }
+
+  .blog-post-body h2 {
+    font-size: 4.53vw;
+  }
+
+  .blog-post-body blockquote,
+  .blog-post-body h3 {
+    font-size: 4.53vw;
+  }
+
+  /* Margins */
+  .blog-post-body p,
+  .blog-post-body blockquote,
+  .blog-post-body ul,
+  .blog-post-body ol {
+    margin: 4vw 0 5.33vw 0;
+  }
+
+  .blog-post-body h2 {
+    margin: 12vw 0 4vw 0;
+  }
+
+  .blog-post-body img {
+    margin: 5.33vw 0;
+  }
+
+  .blog-post-body blockquote {
+    margin: 16.66vw 0 13.33vw 0;
+  }
+
+  .blog-post-body blockquote::after {
+    width: 12.8vw;
+    height: 9.6vw;
+    transform: translateY(-50%);
+  }
+
+  .blog-post-body blockquote::before {
+    width: 12.8vw;
+    height: 9.6vw;
+    transform: translateY(40%);
+  }
+}
+
+/* #FAQs
+================================================== */
+.faqs-page {
+  background-color: #F7F5F5;
+}
+
+.faqs {
+  padding-bottom: 6.4vw;
+}
+
+.faqs .container {
+  width: 78.9%;
+}
+
+.faqs .heading {
+  margin: 2vw 0 2.34vw 0;
+}
+
+.faqs .tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.faqs .tab-navigation {
+  flex: 0 0 18.75vw;
+  background-color: white;
+  padding: 2vw;
+  border-radius: 1.04vw;
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
+}
+
+.faqs .tab-navigation .btn {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.faqs .tab-navigation .tab-btn:not(:last-child) {
+  margin-bottom: 1vw;
+}
+
+.faqs .tab-navigation .tab-btn.active .btn {
+  background-color: #FF674F;
+  color: white;
+}
+
+.faqs .tab-navigation .tab-btn:not(.active) .btn {
+  border-color: transparent;
+  color: black;
+}
+
+.faqs .tab-content {
+  flex: 0 0 54.68vw;
+}
+
+@media (min-width: 1024px) {
+  .faqs .tab-navigation .btn {
+    font-size: .93vw;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .faqs {
+    padding-bottom: 20vw;
+  }
+
+  .faqs .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .faqs .heading {
+    margin: 0 0 8vw 0;
+  }
+
+  .faqs .tabs {
+    display: block;
+  }
+
+  .faqs .tab-navigation {
+    flex: 0 0 18.75vw;
+    background-color: white;
+    border-radius: 0;
+    box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
+
+    position: sticky;
+    top: 17vw;
+    z-index: 10;
+    padding: 0;
+  }
+
+  .faqs .tab-navigation .btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .faqs .tab-navigation ul {
+    display: flex;
+    overflow: auto;
+    padding: 2vw 4.93vw;
+  }
+
+  .faqs .tab-navigation .tab-btn {
+    flex-shrink: 0;
+  }
+
+  .faqs .tab-navigation .tab-btn:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .faqs .tab-navigation .tab-btn.active .btn {
+    background-color: transparent;
+    color: #FF674F;
+  }
+
+  .faqs .tab-navigation .tab-btn:not(.active) .btn {
+    border-color: transparent;
+    color: black;
+  }
+
+  .faqs .breadcrumbs,
+  .faqs .heading,
+  .faqs .tab-content {
+    padding-left: 4.93vw;
+    padding-right: 4.93vw;
+  }
+
+  .faqs .tab-content {
+    margin-top: 5.1vw;
+  }
+}
+
+/* #Contribution
+================================================== */
+.contribution-page {
+  background-color: #F7F5F5;
+}
+
+.contribution {
+  padding: 2vw 0 7.8vw 0;
+}
+
+.contribution .container {
+  padding-left: 10.4vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contribution .img {
+  flex: 0 0 49.32vw;
+  margin-left: 5.2vw;
+}
+
+.contribution .img img {
+  width: 100%;
+  height: 39vw;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 10.4vw;
+}
+
+.contribution .text {
+  padding-top: 1vw;
+}
+
+.contribution .heading {
+  margin-bottom: 2.34vw;
+}
+
+.contribution .heading h1 {
+  line-height: 1.15;
+  margin-bottom: 2vw;
+}
+
+.contribution label {
+  display: block;
+}
+
+.contribution form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contribution form>div {
+  flex: 0 0 100%;
+}
+
+.contribution form>div:not(:last-child) {
+  margin-bottom: 1.8vw;
+}
+
+.contribution form>div:last-child {
+  margin-top: 2vw;
+}
+
+.contribution form>div:nth-child(2),
+.contribution form>div:nth-child(3) {
+  flex: 0 0 47%;
+}
+
+.contribution .uploads {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contribution .upload {
+  flex: 0 0 47%;
+}
+
+@media (max-width: 1023.98px) {
+  .contribution {
+    padding: 0 0 20vw 0;
+  }
+
+  .contribution .container {
+    padding: 0 4.93vw;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .contribution .img {
+    flex: 0;
+    margin-left: 0;
+    margin-bottom: 8vw;
+  }
+
+  .contribution .img img {
+    height: 83vw;
+    border-top-left-radius: 20vw;
+  }
+
+  .contribution .text {
+    padding-top: 0;
+  }
+
+  .contribution .heading {
+    margin-bottom: 5.33vw;
+  }
+
+  .contribution .heading h1 {
+    margin-bottom: 5.33vw;
+  }
+
+  .contribution label {
+    display: none;
+  }
+
+  .contribution form {
+    display: block;
+  }
+
+  .contribution form>div {
+    flex: 0 0 100%;
+  }
+
+  .contribution form>div:not(:last-child) {
+    margin-bottom: 5.33vw;
+  }
+
+  .contribution form>div:last-child {
+    margin-top: 0;
+  }
+}
+
+/* #Season Pass Popup
+================================================== */
+#seasonPassPopup {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+#seasonPassPopup .popup-content {
+  width: 50%;
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 1.04vw;
+  overflow: hidden;
+}
+
+#seasonPassPopup .popup-close {
+  position: absolute;
+  top: 1.2vw;
+  right: 1.2vw;
+}
+
+#seasonPassPopup .popup-close img {
+  width: 1vw;
+}
+
+#seasonPassPopup .img {
+  flex: 0 0 23.33vw;
+  margin-right: 2.85vw;
+}
+
+#seasonPassPopup .img img {
+  width: 100%;
+  height: 23.43vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+#seasonPassPopup .text {
+  flex-grow: 1;
+}
+
+#seasonPassPopup .text h2 {
+  margin-bottom: 1vw;
+}
+
+#seasonPassPopup .text ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.3vw;
+  line-height: 1;
+}
+
+#seasonPassPopup .text ul p {
+  display: flex;
+  align-items: center;
+}
+
+#seasonPassPopup .text ul p img {
+  width: .78vw;
+  margin-left: .5vw;
+}
+
+#seasonPassPopup .text ul li:not(:last-child) {
+  margin-right: .6vw;
+  padding-right: .6vw;
+  border-right: 1px solid #C2C2C2;
+}
+
+#seasonPassPopup .text ul li:first-child {
+  border: none;
+}
+
+#seasonPassPopup .text .level {
+  margin-top: 2.8vw;
+}
+
+#seasonPassPopup .text .btn {
+  margin-top: 3vw;
+}
+
+#seasonPassPopup .label {
+  border: 1px solid #FF674F;
+  color: #FF674F;
+  height: 1.2vw;
+  border-radius: 500px;
+  padding: .416vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1023.98px) {
+  #seasonPassPopup .popup-content {
+    width: 90%;
+    display: block;
+    border-radius: 2.66vw;
+    padding: 5.33vw 4vw 8vw 4vw;
+  }
+  
+  #seasonPassPopup .popup-close {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4.93vw;
+  }
+  
+  #seasonPassPopup .popup-close img {
+    width: 4.66vw;
+  }
+  
+  #seasonPassPopup .img {
+    margin-right: 0;
+    margin-bottom: 6vw;
+  }
+  
+  #seasonPassPopup .img img {
+    height: 82.66vw;
+    border-radius: 1.33vw;
+  } 
+  
+  #seasonPassPopup .text h2 {
+    margin-bottom: 4vw;
+    line-height: 1;
+  }
+  
+  #seasonPassPopup .text ul {
+    margin-bottom: 6.65vw;
+  }
+  
+  #seasonPassPopup .text ul p img {
+    width: 4vw;
+    margin-left: 2vw;
+  }
+  
+  #seasonPassPopup .text ul li:not(:last-child) {
+    margin-right: 2vw;
+    padding-right: 2vw;
+    border-right: 1px solid #C2C2C2;
+  }
+  
+  #seasonPassPopup .text ul li:first-child {
+    border: none;
+  }
+  
+  #seasonPassPopup .text .level {
+    margin-top: 6.65vw;
+    display: flex;
+    align-items: center;
+  }
+
+  #seasonPassPopup .text .level > *:not(:last-child) {
+    margin-right: 4vw;
+  }
+  
+  #seasonPassPopup .text .btn {
+    margin-top: 14.66vw;
+  }
+  
+  #seasonPassPopup .label {
+    height: 6vw;
+    padding: 3vw;
   }
 }

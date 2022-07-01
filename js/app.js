@@ -11,6 +11,20 @@ if (hamburgerBtn) {
   });
 }
 
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    header.classList.add('header-white');
+  } else {
+    header.classList.remove('header-white');
+  }
+});
+
+if (window.scrollY > 0) {
+  header.classList.add('header-white');
+} else {
+  header.classList.remove('header-white');
+}
+
 /* #Reviews Slider
   ======================================================= */
 if (document.querySelector('.reviews-slider .slider-1 .swiper') && document.querySelector('.reviews-slider .slider-2 .swiper')) {
