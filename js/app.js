@@ -28,25 +28,42 @@ if (window.scrollY > 0) {
 /* #Reviews Slider
   ======================================================= */
 if (document.querySelector('.reviews-slider .slider-1 .swiper') && document.querySelector('.reviews-slider .slider-2 .swiper')) {
-  const slider2 = new Swiper(".reviews-slider .slider-2 .swiper", {
+  const slider3 = new Swiper(".reviews-slider .slider-3 .swiper", {
     loop: true,
     slidesPerView: 1.3,
     allowTouchMove: false,
   });
 
+  const slider2 = new Swiper(".reviews-slider .slider-2 .swiper", {
+    loop: true,
+    slidesPerView: 1,
+    allowTouchMove: false,
+  });
+
+  let sliders = [slider2, slider3];
+  console.log(sliders);
+
   const slider1 = new Swiper(".reviews-slider .slider-1 .swiper", {
     loop: true,
     slidesPerView: 1,
     controller: {
-      control: slider2
+      control: sliders
     },
     navigation: {
-      nextEl: ".reviews-slider .slider-1 .next",
-      prevEl: ".reviews-slider .slider-1 .prev",
+      nextEl: ".reviews-slider .next",
+      prevEl: ".reviews-slider .prev",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".reviews-slider .swiper-pagination",
     },
+    breakpoints: {
+      0: {
+        allowTouchMove: true
+      },
+      1024: {
+        allowTouchMove: false,
+      }
+    }
   });
 }
 
