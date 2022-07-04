@@ -41,7 +41,6 @@ if (document.querySelector('.reviews-slider .slider-1 .swiper') && document.quer
   });
 
   let sliders = [slider2, slider3];
-  console.log(sliders);
 
   const slider1 = new Swiper(".reviews-slider .slider-1 .swiper", {
     loop: true,
