@@ -30,8 +30,6 @@ const headerSearch = document.querySelector('.header-search');
 const headerSearchIcon = document.querySelector('.header-search-icon');
 const headerSearchClose = document.querySelector('.header-search-close');
 
-console.log(headerSearchClose, headerSearchIcon);
-
 header.addEventListener('click', (e) => {
   if (e.target.closest('.header-search-icon')) {
     headerSearch.classList.toggle('show');
