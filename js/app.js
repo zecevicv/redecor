@@ -25,6 +25,32 @@ if (window.scrollY > 0) {
   header.classList.remove('header-white');
 }
 
+// Search
+const headerSearch = document.querySelector('.header-search');
+const headerSearchIcon = document.querySelector('.header-search-icon');
+const headerSearchClose = document.querySelector('.header-search-close');
+
+console.log(headerSearchClose, headerSearchIcon);
+
+header.addEventListener('click', (e) => {
+  if (e.target.closest('.header-search-icon')) {
+    headerSearch.classList.toggle('show');
+
+    header.classList.remove('show');
+    body.classList.remove('no-scroll');
+  }
+
+  if (e.target.closest('.header-search-close')) {
+    headerSearch.classList.remove('show');
+  }
+});
+
+window.addEventListener('click', (e) => {
+  if (!e.target.closest('.header-search') && headerSearch.classList.contains('show')) {
+    headerSearch.classList.remove('show');
+  }
+});
+
 /* #Reviews Slider
   ======================================================= */
 if (document.querySelector('.reviews-slider .slider-1 .swiper') && document.querySelector('.reviews-slider .slider-2 .swiper')) {

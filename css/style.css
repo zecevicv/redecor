@@ -182,12 +182,17 @@ body {
 .input-secondary {
   font-family: inherit;
   display: block;
-  color: #BFBFBF;
+  color: black;
   padding: .78vw 0;
   width: 100%;
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #BFBFBF;
+  transition: all .4s ease;
+}
+
+.input-secondary:focus {
+  border-color: black;
 }
 
 .input-secondary::placeholder {
@@ -768,12 +773,31 @@ body {
   margin-left: auto;
 }
 
-.header-action .search {
-  margin-right: 2.34vw;
+.header .header-search {
+  display: flex;
+  align-items: center;
 }
 
-.header-action .search img {
+.header .header-search-icon {
+  margin-right: 2.34vw;
+  margin-left: .5vw;
+}
+
+.header .header-search-icon img {
   width: 1.45vw;
+}
+
+.header .header-search .d-desktop,
+.header .header-search .d-mobile {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+
+.header .header-search.show .d-desktop,
+.header .header-search.show .d-mobile {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header .collapse-toggler {
@@ -906,11 +930,11 @@ body {
     margin-left: 0;
   }
 
-  .header-action .search {
+  .header .header-search-icon {
     margin-right: 0;
   }
 
-  .header-action .search img {
+  .header .header-search-icon img {
     width: 6.5vw;
   }
 
@@ -934,6 +958,33 @@ body {
 
   .header .collapse a:not(:last-child) {
     margin-bottom: 2vw;
+  }
+
+  .header .header-search .d-mobile {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 100%;
+    background-color: #F7F5F5;
+    display: flex;
+    align-items: center;
+    height: 13.33vw;
+    padding: 0 4.93vw;
+    border-bottom: 1px solid #707070;
+    transition: all .5s ease;
+  }
+
+  .header.header-white .header-search .d-mobile {
+    background-color: white;
+  }
+
+  .header .header-search .d-mobile a img {
+    width: 3.33vw;
+  }
+
+  .header .header-search .d-mobile input {
+    background-color: transparent;
   }
 }
 
@@ -4244,4 +4295,10 @@ body {
     height: 6vw;
     padding: 3vw;
   }
+}
+
+/* #Search Page
+================================================== */
+.search-page .blog-inner .heading {
+  width: 100%;
 }
