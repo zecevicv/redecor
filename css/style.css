@@ -34,6 +34,10 @@ body {
   color: #1ABEB9;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 /* #Btn
 ================================================== */
 .btn {
@@ -187,7 +191,7 @@ body {
   width: 100%;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #BFBFBF;
+  border-bottom: 1px solid #787878;
   transition: all .4s ease;
 }
 
@@ -196,12 +200,12 @@ body {
 }
 
 .input-secondary::placeholder {
-  color: #BFBFBF;
+  color: #787878;
 }
 
 @media (max-width: 1023.98px) {
   .input-secondary {
-    border: 1px solid #BFBFBF;
+    border: 1px solid #787878;
     height: 12vw;
     border-radius: 500px;
     padding: 0 4vw;
@@ -213,12 +217,12 @@ body {
 .select-primary {
   font-family: inherit;
   display: block;
-  color: #BFBFBF;
+  color: #787878;
   padding: .78vw 0;
   width: 100%;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #BFBFBF;
+  border-bottom: 1px solid #787878;
   appearance: none;
 
   background-image: url('../img/icons/chevron-down-orange.svg');
@@ -229,7 +233,7 @@ body {
 
 @media (max-width: 1023.98px) {
   .select-primary {
-    border: 1px solid #BFBFBF;
+    border: 1px solid #787878;
     height: 12vw;
     border-radius: 500px;
     padding: 0 4vw;
@@ -243,19 +247,21 @@ body {
 .textarea-primary {
   font-family: inherit;
   display: block;
-  color: #BFBFBF;
-  padding: .78vw 0;
+  color: #787878;
+  height: 6.4vw;
+  padding: .78vw;
   width: 100%;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #BFBFBF;
+  border: 1px solid #787878;
   resize: none;
+  border-radius: .5vw;
 }
 
 @media (max-width: 1023.98px) {
   .textarea-primary {
     padding: 4vw;
-    border: 1px solid #BFBFBF;
+    border: 1px solid #787878;
     border-radius: 1.33vw;
     height: 42vw;
   }
@@ -290,6 +296,66 @@ body {
   .upload img {
     width: 8.66vw;
     margin-bottom: 2.66vw;
+  }
+}
+
+/* #Checkbox
+================================================== */
+.checkbox input {
+  width: 1.2vw;
+  height: 1.2vw;
+  cursor: pointer;
+  appearance: none;
+  border-color: #BFBFBF;
+  border-width: 1px;
+  border-style: solid;
+  flex: 0 0 1.2vw;
+  border-radius: 50%;
+}
+
+.checkbox input:checked {
+  border-color: #BFBFBF;
+  background-color: #FF674F;
+  background-image: none;
+}
+
+.checkbox label {
+  padding-left: .52vw;
+}
+
+@media (max-width: 1023.98px) {
+  .checkbox input {
+    width: 4.66vw;
+    height: 4.66vw;
+    flex: 0 0 4.66vw;
+  }
+  
+  .checkbox label {
+    padding-left: 2vw;
+    line-height: 1.25;
+    display: block!important;
+  }
+}
+
+/* #Scrollable Box
+================================================== */
+.scrollable-box {
+  display: block;
+  color: black;
+  height: 14vw;
+  padding: .78vw;
+  width: 100%;
+  border: 1px solid #787878;
+  border-radius: .5vw;
+  overflow-y: auto;
+}
+
+@media (max-width: 1023.98px) {
+  .scrollable-box {
+    padding: 4vw;
+    border: 1px solid #787878;
+    border-radius: 1.33vw;
+    height: 48.8vw;
   }
 }
 
@@ -4042,6 +4108,11 @@ body {
 
 .contribution label {
   display: block;
+  margin-bottom: .5vw;
+}
+
+.contribution .scrollable-box {
+  margin-bottom: .5vw;
 }
 
 .contribution form {
@@ -4113,6 +4184,11 @@ body {
 
   .contribution label {
     display: none;
+  }
+
+  .contribution label.d-mobile {
+    display: block;
+    margin-bottom: 1.33vw;
   }
 
   .contribution form {
