@@ -4373,6 +4373,126 @@ body {
   }
 }
 
+/* #Login Popup
+================================================== */
+#loginPopup {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+#loginPopup .popup-content {
+  width: 26%;
+  box-shadow: 0 -5px 55px rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 1.04vw;
+  overflow: hidden;
+  text-align: center;
+  padding: 2.86vw 2vw 3.65vw 2vw;
+}
+
+#loginPopup .popup-close {
+  position: absolute;
+  top: 1.2vw;
+  right: 1.2vw;
+}
+
+#loginPopup .popup-close img {
+  width: 1vw;
+}
+
+#loginPopup .text {
+  flex-grow: 1;
+}
+
+#loginPopup .text h2 {
+  line-height: 1.2;
+  margin-bottom: 1vw;
+}
+
+#loginPopup .btns {
+  display: flex;
+  flex-direction: column;
+  width: 17.17vw;
+  margin: 0 auto;
+  margin-top: 1.5vw;
+}
+
+#loginPopup .btn {
+  position: relative;
+  justify-content: space-between;
+}
+
+#loginPopup .btn:not(:last-child) {
+  margin-bottom: 1vw;
+  background-color: white;
+  border-color: black;
+  color: black;
+  font-weight: bold;
+  padding-left: 3.125vw;
+}
+
+#loginPopup .btn:not(:last-child) img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  margin-left: .416vw;
+  width: 2vw;
+  border-radius: 50%;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .16);
+}
+
+#loginPopup .btn:first-child {
+  background-color: #4867AA;
+  color: white;
+  border-color: transparent;
+}
+
+@media (max-width: 1023.98px) {
+  #loginPopup .popup-content {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 2.66vw;
+    padding: 6.4vw 6vw 8vw 6vw;
+  }
+  
+  #loginPopup .popup-close {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18.4vw;
+  }
+  
+  #loginPopup .popup-close img {
+    width: 4.66vw;
+  }
+  
+  #loginPopup .text h2 {
+    margin-bottom: 4vw;
+    line-height: 1;
+  }
+
+  #loginPopup .btns {
+    width: 68vw;
+    margin-top: 8vw;
+  }
+
+  #loginPopup .btn:not(:last-child) img {
+    margin-left: 1.3vw;
+    width: 8.66vw;
+  }
+
+  #loginPopup .btn:not(:last-child) {
+    padding-left: 13vw;
+  }
+
+  #loginPopup .btn:not(:last-child) {
+    margin-bottom: 4vw;
+  }
+}
+
 /* #Search Page
 ================================================== */
 .search-page .blog-inner .heading {
