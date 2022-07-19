@@ -1,21 +1,21 @@
 /* #Fonts
 ================================================== */
 @font-face {
-  font-family: 'mazard';
+  font-family: 'gilroy';
   font-weight: 400;
-  src: url("../font/MazzardM-Regular.ttf");
+  src: url("../font/GilroyRegular_normal_normal.woff");
 }
 
 @font-face {
-  font-family: 'mazard';
+  font-family: 'gilroy';
   font-weight: 600;
-  src: url("../font/MazzardH-SemiBold.ttf");
+  src: url("../font/GilroySemiBold_normal_normal.woff");
 }
 
 /* #Global
 ================================================== */
 body {
-  font-family: 'mazard', sans-serif;
+  font-family: 'gilroy', sans-serif;
   padding-top: 5.78vw;
   line-height: 1.5;
 }
