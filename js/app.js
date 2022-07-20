@@ -180,15 +180,47 @@ if (document.querySelector('.card-slider-3 .swiper')) {
 
 /* #Scrollable Box
 ======================================================= */
-document.querySelector(".scrollable-box").addEventListener("scroll", checkScrollHeight, false);
-
-function checkScrollHeight(){
-    var scrollableBox = document.querySelector(".scrollable-box"); 
-    if ((scrollableBox.scrollTop + scrollableBox.offsetHeight) >= scrollableBox.scrollHeight){
-      if (scrollableBox.closest('form')) {
-        let form = scrollableBox.closest('form');
-        form.querySelector(".checkbox input").disabled = false;
-        form.querySelector(".checkbox input").checked = true;
+if (document.querySelector(".scrollable-box")) {
+  document.querySelector(".scrollable-box").addEventListener("scroll", checkScrollHeight, false);
+  
+  function checkScrollHeight(){
+      var scrollableBox = document.querySelector(".scrollable-box"); 
+      if ((scrollableBox.scrollTop + scrollableBox.offsetHeight) >= scrollableBox.scrollHeight){
+        if (scrollableBox.closest('form')) {
+          let form = scrollableBox.closest('form');
+          form.querySelector(".checkbox input").disabled = false;
+          form.querySelector(".checkbox input").checked = true;
+        }
       }
-    }
+  }
+}
+
+/* #Sharing
+======================================================= */
+const sharing = document.querySelector('.sharing');
+const sharingToggler = document.querySelector('.sharing-toggler');
+const sharingClose = document.querySelector('.sharing-close');
+
+if (window.innerWidth > 1023) {
+  sharingToggler.addEventListener('click', e => {
+    e.preventDefault();
+    sharing.classList.add('show');
+  });
+  
+  sharingClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    sharing.classList.remove('show');
+  })
+} else {
+  sharingToggler.addEventListener('click', event => {
+    if (navigator.share) { 
+     navigator.share({
+        title: 'WebShare API Demo',
+        url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+      }).then(() => {
+      })
+      .catch(console.error);
+      } else {
+      }
+  });
 }
