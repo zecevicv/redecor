@@ -4438,6 +4438,7 @@ body {
 ================================================== */
 .sharing {
   position: relative;
+  margin: 1.5vw 0 2.34vw 0;
 }
 
 .sharing-toggler img {
@@ -4490,6 +4491,10 @@ body {
 }
 
 @media (max-width: 1023.98px) {
+  .sharing {
+    margin: 6vw 0;
+  }
+
   .sharing-toggler img {
     width: 10.4vw;
   }
